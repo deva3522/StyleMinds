@@ -1,0 +1,42 @@
+/* Global styles for consistent layout and design */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Additional styles for header, main content, and footer */
+.app-container {
+  max-width: 1200px;
+  margin: 20px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.app-header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.app-content {
+  padding: 20px;
+}
+
+.app-footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 0 0 8px 8px;
+}
