@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: styleminds
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: styleminds
+  template:
+    metadata:
+      labels:
+        app: styleminds
+    spec:
+      containers:
+        - name: backend
+          image: styleminds-backend:latest
+          ports:
+            - containerPort: 5000
+          env:
+            - name: SERVERLESS_INFERENCE_URL
+              value: "https://<your-serverless-endpoint>"
+        - name: frontend
+          image: styleminds-frontend:latest
+          ports:
+            - containerPort: 3000
